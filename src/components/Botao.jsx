@@ -3,14 +3,26 @@ import { Button, Text } from "react-native";
 import estilo from "./estilo";
 
 export default props => {
-    
-    function executar(){
-        console.warn('Exec!!')
+
+    function executar() {
+        console.warn('Exec #01!!!')
     }
-    return(
-        <Button
-            title="Executar"
-            onPress={executar}
-        />
+    return (
+        <>
+            <Button
+                title="Executar #01"
+                onPress={executar}
+            />
+            <Button
+                title="Executar #02"
+                onPress={function () {
+                    console.warn('Exec #02!!!');
+                }}
+            />
+            <Button
+                title="Executar #03"
+                onPress={()=> console.warn('Exec #03!!!')}
+            />
+        </>
     )
 }
