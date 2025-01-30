@@ -1,8 +1,10 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import ContadorV2 from "./components/contador/ContadorV2";
+import { SafeAreaView, StyleSheet } from "react-native";
+import ParImpar from "./components/ParImpar";
 
 
+// import Diferenciar from "./components/Diferenciar";
+// import ContadorV2 from "./components/contador/ContadorV2";
 // import Pai from "./components/indireta/Pai";
 // import Pai from "./components/direta/Pai";
 // import Contador from "./components/Contador";
@@ -14,9 +16,11 @@ import ContadorV2 from "./components/contador/ContadorV2";
 // import Aleatorio from "./components/Aleatorio";
 
 function App() {
-    return <View style={style.App}>
-        <ContadorV2/>
+    return <SafeAreaView style={style.App}>
+        <ParImpar num={1}/>
         {/* 
+        <Diferenciar/>
+        <ContadorV2/>
         <Pai/>
         <Pai/>
         <Contador inicial={100} passo={13}/>
@@ -30,7 +34,7 @@ function App() {
         <Comp1/>
         <Comp2/>
         <Primeiro/> */}
-    </View>
+    </SafeAreaView>
 }
 
 const style = StyleSheet.create({
