@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import UsuarioLogado from "./components/UsuarioLogado";
+import ListaProdutos from "./components/produtos/ListaProdutos";
 
 
 // import Familia from "./components/relacao/Familia";
@@ -20,8 +21,9 @@ import UsuarioLogado from "./components/UsuarioLogado";
 
 function App() {
     return <SafeAreaView style={style.App}>
-        <UsuarioLogado usuario={{nome:'Joel', email: 'joel@joel.com'}}/>
+        <ListaProdutos/>
         {/* 
+        <UsuarioLogado usuario={{nome:'Joel', email: 'joel@joel.com'}}/>
         <Familia>
             <Membro nome="José" sobrenome="Belem"/>
             <Membro nome="Ana" sobrenome="Belem"/>
