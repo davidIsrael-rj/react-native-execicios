@@ -4,6 +4,9 @@ import Estilo from '../estilo'
 import produtos from './produtos';
 
 export default props => {
+    const produtoRender = ({item: p}) =>{
+        return <Text style={Estilo.fontM}>{p.id}){p.nome} - {p.preco}</Text>
+    }
     return (
         <>
             <Text style={Estilo.fontG}>
@@ -11,13 +14,7 @@ export default props => {
             </Text>
             <FlatList data={produtos}
             keyExtractor={i =>`${i.id}`}
-                renderItem={({ item: p }) => {
-                    return (
-                        <Text style={Estilo.fontM}>
-                            {p.id}) {p.nome} por R$ {p.preco}
-                        </Text>
-                    )
-                }}
+                renderItem={produtoRender}
             />
         </>
     )
