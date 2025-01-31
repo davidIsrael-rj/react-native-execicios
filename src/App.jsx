@@ -17,7 +17,7 @@ import ParImpar from "./components/ParImpar";
 
 function App() {
     return <SafeAreaView style={style.App}>
-        <ParImpar num={1}/>
+        <ParImpar num={2}/>
         {/* 
         <Diferenciar/>
         <ContadorV2/>
