@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import { Text } from "react-native";
 import estilo from "../estilo";
 
-export default class Mega extends Component{
+export default class Mega extends Component {
 
-    render(){
-        return(
+
+    state = {
+        qtdeNumeros: props.qtdeNumeros
+    }
+
+    render() {
+        return (
             <>
                 <Text style={estilo.fontG}>
-                    Gerador de Mega-Sena {this.props.qtdeNumeros}
+                    Gerador de Mega-Sena {this.state.qtdeNumeros}
                 </Text>
             </>
         )
