@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Button, Text, TextInput } from "react-native";
+import { Button, Text, TextInput, View } from "react-native";
 import estilo from "../estilo";
+import MegaNumero from "./MegaNumero";
 
 export default class Mega extends Component {
 
@@ -35,9 +36,16 @@ export default class Mega extends Component {
             numeros.push(n)
         }
 
-        numeros.sort((a,b) => a -b)
+        numeros.sort((a, b) => a - b)
 
         this.setState({ numeros })
+    }
+
+    exibirNumeros = () => {
+        const nums = this.state.numeros
+        return nums.map(num => {
+            return <MegaNumero num={num} />
+        })
     }
 
     render() {
@@ -65,9 +73,14 @@ export default class Mega extends Component {
                     title="Gerar"
                     onPress={this.gerarNumerosA}
                 />
-                <Text>
-                    {this.state.numeros.join(',')}
-                </Text>
+                <View style={{
+                    marginTop: 20,
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: "center"
+                }}>
+                    {this.exibirNumeros()}
+                </View>
             </>
         )
     }
